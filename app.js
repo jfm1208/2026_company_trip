@@ -1,5 +1,5 @@
 (() => {
-  const SCRIPT_URL = "";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxy2EN4t2m-1LMjtOS4jNQJxcM8KzmTu1qdExPMDg-hWFBOncPTqW-koPSJ_raxt7OUFw/exec";
   const form = document.querySelector("#registration-form");
   const button = document.querySelector("#submit-button");
   const status = document.querySelector("#form-status");
