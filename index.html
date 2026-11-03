@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8ef">
+    <meta name="description" content="2026 宇宙科技公司員工旅遊活動資訊與報名表單">
+    <title>2026 宇宙科技公司員工旅遊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="title-row">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> 一起出發，探索新可能</p>
+        <h1>2026 宇宙科技公司<br class="mobile-break">員工旅遊</h1>
+      </header>
+
+      <section class="hero-row" aria-label="員工旅遊主視覺">
+        <img src="./cover.jpg" alt="員工旅遊主視覺：一起出發，遇見更好的我們">
+      </section>
+
+      <div class="content-row">
+        <section class="schedule-card" aria-labelledby="schedule-title">
+          <div class="section-kicker">THE DAY'S PLAN</div>
+          <h2 id="schedule-title">活動內容</h2>
+          <p class="section-intro">充飽電，一起享受精彩的一天！</p>
+          <ol class="schedule-list">
+            <li><time datetime="08:00">8:00</time><span>報到</span><i aria-hidden="true"></i></li>
+            <li><time datetime="09:00">9:00</time><span>場次一</span><i aria-hidden="true"></i></li>
+            <li><time datetime="10:00">10:00</time><span>break time</span><i aria-hidden="true"></i></li>
+            <li><time datetime="10:30">10:30</time><span>場次二</span><i aria-hidden="true"></i></li>
+            <li><time datetime="11:30">11:30</time><span>Q&amp;A</span><i aria-hidden="true"></i></li>
+            <li><time datetime="12:00">12:00</time><span>活動結束</span><i aria-hidden="true"></i></li>
+          </ol>
+          <div class="schedule-note"><span aria-hidden="true">☀</span> 帶著好心情，準時集合！</div>
+        </section>
+
+        <section class="form-card" aria-labelledby="form-title">
+          <div class="form-heading">
+            <div>
+              <div class="section-kicker">SAVE YOUR SPOT</div>
+              <h2 id="form-title">立即報名</h2>
+            </div>
+            <span class="form-icon" aria-hidden="true">✈</span>
+          </div>
+          <p class="section-intro">填寫以下資料，和我們一起出發！<span class="required-note">＊為必填</span></p>
+
+          <form id="registration-form" action="#" method="post" target="submission-frame">
+            <input id="request-id" name="requestId" type="hidden">
+            <label for="name">姓名 <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" autocomplete="name" maxlength="100" required>
+
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+
+            <div class="field-pair">
+              <div>
+                <label for="department">單位</label>
+                <input id="department" name="department" autocomplete="organization" maxlength="100">
+              </div>
+              <div>
+                <label for="phone">電話 <span aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required>
+              </div>
+            </div>
+
+            <label for="title">職稱</label>
+            <input id="title" name="title" autocomplete="organization-title" maxlength="100">
+
+            <button type="submit" id="submit-button">
+              <span>送出報名</span><span aria-hidden="true">→</span>
+            </button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <iframe class="submission-frame" name="submission-frame" title="報名資料送出結果"></iframe>
+        </section>
+      </div>
+
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
