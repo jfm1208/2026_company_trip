@@ -29,7 +29,7 @@ function doPost(e) {
         name,
         email,
         String(data.department || '').trim(),
-        phone,
+        "'" + phone,
         String(data.title || '').trim()
       ]);
     } finally {
@@ -81,8 +81,8 @@ function resultPage_(requestId, ok, message) {
     message: message
   }).replace(/</g, '\\u003c');
   return HtmlService.createHtmlOutput(
-    '<!doctype html><html><meta charset="utf-8"><script>window.parent.postMessage(' +
+    '<!doctype html><html><meta charset="utf-8"><script>window.top.postMessage(' +
       payload +
       ', "*");</script><body></body></html>'
-  );
+  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
